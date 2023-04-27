@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+body {
+  background-color: #232324;
+}
+
+.message-list {
+  height: calc(100% -200px);
+  overflow: auto;
+  margin-bottom: 60px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +45,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing-indicator-animation {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.sent-message {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sent-message.show {
+  opacity: 1;
 }
